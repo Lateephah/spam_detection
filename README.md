@@ -90,10 +90,6 @@ The dataset originally contained unnecessary columns with missing values:
 
 ### 🔤 Word Frequency Analysis (Spam Messages)
 
-![Word Frequency](images/spam_word_frequency.png)
-
-**Insight:**
-
 * Common spam indicators include:
 
   * **free**
@@ -153,7 +149,7 @@ Models were first trained on the original dataset without any balancing.
 
 ### 📊 Confusion Matrix — Naive Bayes (Baseline)
 
-![NB Baseline](images/cm_nb_baseline.png)
+![NB Baseline](images/naiveBayes_baseline.png)
 
 * High accuracy but lower spam recall
 * Some spam messages misclassified
@@ -162,7 +158,7 @@ Models were first trained on the original dataset without any balancing.
 
 ### 📊 Confusion Matrix — SVM (Baseline)
 
-![SVM Baseline](images/cm_svm_baseline.png)
+![SVM Baseline](images/svm_baseline.png)
 
 * Strong and balanced performance
 * Minimal misclassification
@@ -171,7 +167,7 @@ Models were first trained on the original dataset without any balancing.
 
 ### 📊 Confusion Matrix — Random Forest (Baseline)
 
-![RF Baseline](images/cm_rf_baseline.png)
+![RF Baseline](images/rf_baseline.png)
 
 * Very high precision
 * Lower recall for spam
@@ -180,7 +176,7 @@ Models were first trained on the original dataset without any balancing.
 
 ### 📊 Confusion Matrix — Logistic Regression (Baseline)
 
-![LR Baseline](images/cm_lr_baseline.png)
+![LR Baseline](images/lr_baseline.png)
 
 * Balanced performance
 * Good trade-off between precision and recall
@@ -199,7 +195,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ### 📊 Confusion Matrix — Naive Bayes (Oversampling)
 
-![NB OS](images/cm_nb_os.png)
+![NB OS](images/naiveBayes_oversampling.png)
 
 * Significant improvement in spam detection
 * Slight drop in precision
@@ -208,7 +204,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ### 📊 Confusion Matrix — SVM (Oversampling)
 
-![SVM OS](images/cm_svm_os.png)
+![SVM OS](images/svm_oversampling.png)
 
 * Slight improvement in recall
 * Minor precision trade-off
@@ -217,7 +213,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ### 📊 Confusion Matrix — Random Forest (Oversampling)
 
-![RF OS](images/cm_rf_os.png)
+![RF OS](images/rf_oversampling.png)
 
 * Better recall compared to baseline
 * More balanced predictions
@@ -226,7 +222,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ### 📊 Confusion Matrix — Logistic Regression (Oversampling)
 
-![LR OS](images/cm_lr_os.png)
+![LR OS](images/lr_oversampling.png)
 
 * Performance remains stable
 * No major improvement
@@ -245,7 +241,7 @@ Applied to:
 
 ### 📊 Confusion Matrix — Logistic Regression (Class Weight)
 
-![LR CW](images/cm_lr_cw.png)
+![LR CW](images/lr_classweight.png)
 
 * Improved focus on spam
 * Balanced precision and recall
@@ -289,15 +285,6 @@ Applied to:
 
 ---
 
-# 🚀 Future Improvements
-
-* Hyperparameter tuning (GridSearchCV)
-* Deep learning approaches (LSTM, BERT)
-* Deployment with Streamlit
-* Real-time spam filtering system
-
----
-
 # 🛠️ Tech Stack
 
 * Python
@@ -308,17 +295,6 @@ Applied to:
 
 ---
 
-# 📁 Project Structure
-
-email-spam-detection/
-│
-├── data/
-├── notebooks/
-├── images/
-├── README.md
-└── requirements.txt
-
----
 
 # ✨ Author
 
