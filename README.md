@@ -11,6 +11,8 @@ This project builds a **machine learning-based spam detection system** that clas
 
 Beyond basic classification, this project explores how different **class imbalance handling techniques** affect model performance.
 
+---
+
 ## 🎯 Objectives
 
 The main goals of this project are:
@@ -26,6 +28,8 @@ The main goals of this project are:
 * Compare models using multiple evaluation metrics
 * Identify the best-performing model for real-world use
 
+---
+
 ## 📂 Dataset Description
 
 * Total messages: **5,572**
@@ -33,6 +37,8 @@ The main goals of this project are:
 * Spam: **747 (13%)**
 
 ⚠️ The dataset is **imbalanced**, meaning models may favor predicting ham more often than spam.
+
+---
 
 ## 🧹 Data Cleaning & Preprocessing
 
@@ -55,6 +61,8 @@ The dataset originally contained unnecessary columns with missing values:
   * `spam → 1`
 * Checked for missing values
 
+---
+
 ## 🔍 Exploratory Data Analysis (EDA)
 
 ### 📊 Class Distribution
@@ -66,6 +74,7 @@ The dataset originally contained unnecessary columns with missing values:
 * The dataset is heavily skewed toward ham messages
 * This imbalance can affect model performance
 
+---
 
 ### 📏 Message Length Distribution
 
@@ -76,6 +85,8 @@ The dataset originally contained unnecessary columns with missing values:
 * Spam messages tend to be **longer and more structured**
 * Ham messages are shorter and conversational
 * Long messages (400–800 characters) were retained as they likely represent real spam
+
+---
 
 ### 🔤 Word Frequency Analysis (Spam Messages)
 
@@ -91,6 +102,8 @@ The dataset originally contained unnecessary columns with missing values:
   * **claim**
 * These patterns make spam detection effective with NLP
 
+---
+
 ## ⚙️ Text Preprocessing
 
 To prepare text for modeling:
@@ -100,6 +113,7 @@ To prepare text for modeling:
 * Removed stopwords using NLTK
 * Tokenized text
 
+---
 
 ## 🔄 Feature Engineering
 
@@ -110,6 +124,7 @@ Text data was transformed into numerical features using:
 * Converts text into weighted numerical representation
 * Highlights important words while reducing noise
 
+---
 
 ## 🔀 Train-Test Split
 
@@ -117,8 +132,11 @@ Text data was transformed into numerical features using:
 * Test set: **20%**
 * Used **stratified sampling** to maintain class distribution
 
+---
 
 # 🤖 Modeling Approach
+
+---
 
 ## 🔹 Baseline Models (No Imbalance Handling)
 
@@ -131,6 +149,8 @@ Models were first trained on the original dataset without any balancing.
 * Support Vector Machine (SVM)
 * Random Forest
 
+---
+
 ### 📊 Confusion Matrix — Naive Bayes (Baseline)
 
 ![NB Baseline](images/cm_nb_baseline.png)
@@ -138,7 +158,7 @@ Models were first trained on the original dataset without any balancing.
 * High accuracy but lower spam recall
 * Some spam messages misclassified
 
-
+---
 
 ### 📊 Confusion Matrix — SVM (Baseline)
 
