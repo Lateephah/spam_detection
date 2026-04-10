@@ -160,6 +160,7 @@ Here, the Naive Bayes Baseline model correctly classified almost all Ham message
 ![SVM Baseline](images/svm_baseline.png)
 
 The SVM baseline model shows stronger balance compared to Naive Bayes. From the confusion matrix, most Ham messages were correctly classified (962), with only 4 misclassified as Spam. For Spam, 134 were correctly identified, while 15 slipped through as Ham.
+
 ---
 
 ### 📊 Confusion Matrix — Random Forest (Baseline)
@@ -263,6 +264,8 @@ Naive Bayes improved substantially with oversampling, raising Spam recall from 0
 Logistic Regression performed consistently well, with both oversampling and class weighting yielding balanced metrics (precision ~0.93, recall ~0.93).
 SVM achieved the highest baseline accuracy (0.983) and maintained strong precision and recall after oversampling, showing reliable performance across classes.
 Random Forest had excellent precision (0.99) but weaker Spam recall in the baseline (0.83). Oversampling improved recall to 0.87, making it more balanced. Overall, oversampling and class weighting helped reduce false negatives for Spam, leading to more dependable spam detection. SVM and Logistic Regression stood out as the most balanced models, while Random Forest and Naive Bayes benefited most from oversampling adjustments.
+
+
 ---
 
 # 🏁 Conclusion
