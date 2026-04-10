@@ -257,11 +257,12 @@ Applying class weighting with Logistic Regression gave results very similar to o
 
 # 🧠 Key Insights
 
-* **SVM achieved the best overall performance**
-* **Logistic Regression remained the most stable model**
-* **Naive Bayes improved significantly with oversampling**
-* **Random Forest had high precision but needed balancing for better recall**
+Across all four models, the baseline results showed strong accuracy but clear imbalance, with Spam recall consistently weaker than Ham. After applying oversampling or class weighting, performance became more balanced, especially for Spam detection.
 
+Naive Bayes improved substantially with oversampling, raising Spam recall from 0.72 to 0.91, though precision dropped slightly.
+Logistic Regression performed consistently well, with both oversampling and class weighting yielding balanced metrics (precision ~0.93, recall ~0.93).
+SVM achieved the highest baseline accuracy (0.983) and maintained strong precision and recall after oversampling, showing reliable performance across classes.
+Random Forest had excellent precision (0.99) but weaker Spam recall in the baseline (0.83). Oversampling improved recall to 0.87, making it more balanced. Overall, oversampling and class weighting helped reduce false negatives for Spam, leading to more dependable spam detection. SVM and Logistic Regression stood out as the most balanced models, while Random Forest and Naive Bayes benefited most from oversampling adjustments.
 ---
 
 # 🏁 Conclusion
