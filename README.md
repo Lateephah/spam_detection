@@ -151,8 +151,7 @@ Models were first trained on the original dataset without any balancing.
 
 ![NB Baseline](images/naiveBayes_baseline.png)
 
-* High accuracy but lower spam recall
-* Some spam messages misclassified
+Here, the Naive Bayes Baseline model correctly classified almost all Ham messages (966), with no false positives. However, it struggled more with Spam, correctly identifying 108 but misclassifying 41 Spam messages as Ham. Overall, this shows the model is very strong at detecting Ham but weaker at catching Spam, which highlights the class imbalance problem.
 
 ---
 
@@ -160,17 +159,15 @@ Models were first trained on the original dataset without any balancing.
 
 ![SVM Baseline](images/svm_baseline.png)
 
-* Strong and balanced performance
-* Minimal misclassification
-
+The SVM baseline model shows stronger balance compared to Naive Bayes. From the confusion matrix, most Ham messages were correctly classified (962), with only 4 misclassified as Spam. For Spam, 134 were correctly identified, while 15 slipped through as Ham.
 ---
 
 ### 📊 Confusion Matrix — Random Forest (Baseline)
 
 ![RF Baseline](images/rf_baseline.png)
 
-* Very high precision
-* Lower recall for spam
+From the confusion matrix, 965 Ham messages were correctly classified, with only 1 misclassified as Spam. For Spam, 124 were correctly identified, while 25 were misclassified as Ham.
+
 
 ---
 
@@ -178,8 +175,7 @@ Models were first trained on the original dataset without any balancing.
 
 ![LR Baseline](images/lr_baseline.png)
 
-* Balanced performance
-* Good trade-off between precision and recall
+From the confusion matrix, 955 Ham messages were correctly classified, with 11 misclassified as Spam. For Spam, 139 were correctly identified, while 10 were misclassified as Ham. 
 
 ---
 
@@ -197,8 +193,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ![NB OS](images/naiveBayes_oversampling.png)
 
-* Significant improvement in spam detection
-* Slight drop in precision
+With Random Oversampling applied, the Naive Bayes model improved its balance between Ham and Spam detection. From the confusion matrix, 959 Ham messages were correctly classified with only 7 misclassified as Spam, while 135 Spam messages were correctly identified and 14 misclassified as Ham.
 
 ---
 
@@ -206,8 +201,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ![SVM OS](images/svm_oversampling.png)
 
-* Slight improvement in recall
-* Minor precision trade-off
+From the confusion matrix, 959 Ham messages were correctly classified with 7 misclassified as Spam, while 135 Spam messages were correctly identified and 14 misclassified as Ham.
 
 ---
 
@@ -215,8 +209,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ![RF OS](images/rf_oversampling.png)
 
-* Better recall compared to baseline
-* More balanced predictions
+ From the confusion matrix, 965 Ham messages were correctly classified with only 1 misclassified as Spam, while 130 Spam messages were correctly identified and 19 misclassified as Ham
 
 ---
 
@@ -224,8 +217,7 @@ Improve the model’s ability to detect spam (increase recall)
 
 ![LR OS](images/lr_oversampling.png)
 
-* Performance remains stable
-* No major improvement
+From the confusion matrix, 955 Ham messages were correctly classified with 11 misclassified as Spam, while 138 Spam messages were correctly identified and 11 misclassified as Ham. 
 
 ---
 
@@ -243,8 +235,7 @@ Applied to:
 
 ![LR CW](images/lr_classweight.png)
 
-* Improved focus on spam
-* Balanced precision and recall
+Applying class weighting with Logistic Regression gave results very similar to oversampling, From the confusion matrix, we could see that 955 Ham messages were correctly classified with 11 misclassified as Spam, while 139 Spam messages were correctly identified and 10 misclassified as Ham.
 
 ---
 
